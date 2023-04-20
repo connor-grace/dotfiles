@@ -4,11 +4,11 @@ source ~/.git-prompt.sh
 setopt PROMPT_SUBST
 PS1='%1~%B%F{cyan}$(__git_ps1)%f %F{red}%#%f '
 export PATH="$PATH:/usr/local/Cellar/openvpn/3.5.7/sbin:/usr/local/share/john:/usr/local/opt/openjdk/bin"
+VIM=nvim
 
 
 # alias
-alias vim='nvim'
-alias zrc='nvim ~/.zshrc'
+alias zrc='vim ~/.zshrc'
 alias src='source ~/.zshrc && source ~/.zshenv'
 alias ll='ls -lah'
 alias cn='cargo new'
