@@ -5,32 +5,27 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    use('nvim-lualine/lualine.nvim')
+
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
     use({
-        'neanias/everforest-nvim',
-        --'navarasu/onedark.nvim',
-        --'rose-pine/neovim',
+        --'neanias/everforest-nvim',
+        --'savq/melange-nvim',
+        'EdenEast/nightfox.nvim',
         config = function()
-            require('everforest').setup({
-                background = 'medium'
-            })
-            --require('onedark').setup {
-            --    style = 'warm'
-            --}
-            --require('onedark').load()
-            --require('rose-pine').setup({
-            --    variant = 'moon'
+            --require('everforest').setup({
+            --    background = 'medium'
             --})
-            vim.cmd('colorscheme everforest')
+            vim.cmd('colorscheme nordfox')
         end
     })
 
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use {
         "nvim-neo-tree/neo-tree.nvim",
@@ -50,20 +45,35 @@ return require('packer').startup(function(use)
         branch = 'v2.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
-            'williamboman/mason.nvim',
-            run = function()
-                pcall(vim.cmd, 'MasonUpdate')
-            end
-        },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            { 'neovim/nvim-lspconfig' }, -- Required
+            {
+                -- Optional
+                'williamboman/mason.nvim',
+                run = function()
+                    pcall(vim.cmd, 'MasonUpdate')
+                end
+            },
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},     -- Required
-        {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
+            -- Autocompletion
+            { 'hrsh7th/nvim-cmp' },     -- Required
+            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+            { 'L3MON4D3/LuaSnip' },     -- Required
+        }
     }
-}
 
+--    use {
+--        "mfussenegger/nvim-dap",
+--        opt = true,
+--        event = "BufReadPre",
+--        module = { "dap" },
+--        requires = {
+--            "theHamsta/nvim-dap-virtual-text",
+--            "rcarriga/nvim-dap-ui",
+--            "nvim-telescope/telescope-dap.nvim",
+--        },
+--        config = function()
+--            require("config.dap").setup()
+--        end,
+--    }
 end)
