@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
             --require('everforest').setup({
             --    background = 'medium'
             --})
-            vim.cmd('colorscheme nordfox')
+            vim.cmd('colorscheme carbonfox')
         end
     })
 
