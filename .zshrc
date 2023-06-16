@@ -22,6 +22,7 @@ alias t0='tmux attach -t 0'
 alias t1='tmux attach -t 1'
 alias t2='tmux attach -t 2'
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cfgpush='cfg commit -m "update dotfiles" && cfg push'
 alias gst='git status'
 
 # updates
