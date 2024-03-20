@@ -21,5 +21,4 @@ alias cfgpush='cfg commit -m "update dotfiles" && cfg push'
 alias gst='git status'
 
 # updates
-alias update_nvim='brew upgrade neovim'
-alias update_rust='rustup update'
+alias updateall='brew upgrade neovim alacritty && rustup update'
