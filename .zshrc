@@ -7,14 +7,9 @@ export PATH="$PATH:/usr/local/Cellar/openvpn/3.5.7/sbin:/usr/local/share/john:/u
 
 
 # alias
-alias vim='nvim'
-alias zrc='vim ~/.zshrc'
+alias zrc='nvim ~/.zshrc'
 alias src='source ~/.zshrc && source ~/.zshenv'
 alias ll='ls -lah'
-alias cn='cargo new'
-alias cb='cargo build'
-alias cr='cargo run'
-alias ct='cargo test'
 alias config='cd ~/.config'
 alias rmp='vim ~/.config/nvim/lua/cgrace/remap.lua'
 alias ovpn='sudo openvpn'
