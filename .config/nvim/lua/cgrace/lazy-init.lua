@@ -22,6 +22,7 @@ require('lazy').setup {
         require 'cgrace/plugins/gitsigns',
         require 'cgrace/plugins/harpoon',
         require 'cgrace/plugins/indent_line',
+        require 'cgrace/plugins/lint',
         require 'cgrace/plugins/lspconfig',
         require 'cgrace/plugins/mini',
         require 'cgrace/plugins/noice',
