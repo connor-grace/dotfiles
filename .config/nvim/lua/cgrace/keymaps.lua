@@ -46,8 +46,18 @@ vim.keymap.set(
 
 vim.keymap.set('n', '<leader>ff', vim.cmd.Ex, { desc = 'Explorer' })
 
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move down' })
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move up' })
+vim.keymap.set(
+    'v',
+    'J',
+    ":m '>+1<CR>gv=gv",
+    { desc = 'Move down', silent = true }
+)
+vim.keymap.set(
+    'v',
+    'K',
+    ":m '<-2<CR>gv=gv",
+    { desc = 'Move up', silent = true }
+)
 
 -- Cursor stays at start of line after J
 vim.keymap.set('n', 'J', 'mzJ`z', { desc = 'Move lower line up' })
