@@ -111,9 +111,16 @@ vim.keymap.set(
 
 vim.keymap.set(
     'n',
-    '<leader>r',
+    '<leader>rw',
     [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
     { desc = 'Global word replace' }
+)
+
+vim.keymap.set(
+    'n',
+    '<leader>rc',
+    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gIc<Left><Left><Left>]],
+    { desc = 'Global word replace with confirm' }
 )
 
 -- Make current file executable
