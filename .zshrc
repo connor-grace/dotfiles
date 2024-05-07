@@ -13,12 +13,14 @@ alias ll='ls -lah'
 alias config='cd ~/.config'
 alias rmp='vim ~/.config/nvim/lua/cgrace/remap.lua'
 alias ovpn='sudo openvpn'
-alias t0='tmux attach -t 0'
-alias t1='tmux attach -t 1'
-alias t2='tmux attach -t 2'
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cfgpush='cfg add -u && cfg commit -m "update dotfiles" && cfg push'
 alias gst='git status'
+
+# functions
+function t {
+    tmux a -t "$1"
+}
 
 # updates
 alias updateall='brew upgrade neovim alacritty && rustup update'
