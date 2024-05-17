@@ -25,9 +25,11 @@ return {
                 }
             end,
             formatters_by_ft = {
+                c = { 'clang-format' },
+                cpp = { 'clang-format' },
+                json = { 'prettierd' },
                 lua = { 'stylua' },
                 typescript = { 'prettierd' },
-                json = { 'prettierd' },
                 -- Conform can also run multiple formatters sequentially
                 -- python = { "isort", "black" },
                 --
