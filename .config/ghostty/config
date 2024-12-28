@@ -1,0 +1,11 @@
+font-family = "Hack Nerd Font Mono"
+font-size = 16
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+theme = nord
+
+cursor-style = block
+shell-integration-features = no-cursor
+shell-integration = zsh

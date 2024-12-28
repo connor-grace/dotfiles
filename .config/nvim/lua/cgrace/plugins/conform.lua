@@ -29,6 +29,7 @@ return {
                 cpp = { 'clang-format' },
                 json = { 'prettierd' },
                 lua = { 'stylua' },
+                rust = { 'rustfmt' },
                 typescript = { 'prettierd' },
                 -- Conform can also run multiple formatters sequentially
                 -- python = { "isort", "black" },
