@@ -1,3 +1,6 @@
+window-height = 999
+window-width = 999
+
 font-family = "Hack Nerd Font Mono"
 font-size = 16
 font-feature = -calt
