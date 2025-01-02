@@ -13,7 +13,7 @@ PS1='%F{cyan}%1~%B%f%F{magenta}$(__git_ps1)%f %F{yellow}>%f '
 
 # alias
 alias zrc='nvim ~/.zshrc'
-alias src='source ~/.zshrc && source ~/.zshenv'
+alias src='source ~/.zshrc && source ~/.zshenv && tmux source-file ~/.config/tmux/tmux.conf'
 alias ll='ls -lah'
 alias config='cd ~/.config'
 alias rmp='vim ~/.config/nvim/lua/cgrace/remap.lua'
