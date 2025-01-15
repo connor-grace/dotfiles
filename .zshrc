@@ -1,5 +1,6 @@
 export PATH="$PATH:/usr/local/Cellar/openvpn/3.5.7/sbin"
-export PATH="$PATH:/usr/local/share/john:/usr/local/opt/openjdk/bin"
+export PATH="$PATH:/usr/local/share/john"
+export PATH="$PATH:/usr/local/opt/openjdk/bin"
 export PATH="$PATH:/usr/local/opt/llvm/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
