@@ -12,7 +12,7 @@ source ~/.git-prompt.sh
 setopt PROMPT_SUBST
 PS1='%F{cyan}%1~%B%f%F{magenta}$(__git_ps1)%f %F{yellow}>%f '
 
-# alias
+# aliases
 alias zrc='nvim ~/.zshrc'
 alias src='source ~/.zshrc && source ~/.zshenv && tmux source-file ~/.config/tmux/tmux.conf'
 alias ll='ls -lah'
@@ -24,9 +24,10 @@ alias cfgpush='cfg add -u && cfg commit -m "update dotfiles" && cfg push'
 alias gst='git status'
 
 # functions
-function t {
+function t() {
     tmux a -t "$1"
 }
 
-# updates
-alias updateall='brew upgrade neovim alacritty && rustup update'
+function push() {
+    git add . && git commit -m "$1" && git push
+}
