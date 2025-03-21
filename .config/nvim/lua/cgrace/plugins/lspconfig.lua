@@ -41,8 +41,7 @@ return {
       -- (sometimes called LSP servers, but that's kind of like ATM Machine) are standalone
       -- processes that communicate with some "client" - in this case, Neovim!
       --
-      -- LSP provides Neovim with features like:
-      --  - Go to definition
+      -- LSP provides Neovim with features like: - Go to definition
       --  - Find references
       --  - Autocompletion
       --  - Symbol Search

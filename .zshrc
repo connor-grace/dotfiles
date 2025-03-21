@@ -1,10 +1,12 @@
-export PATH="$PATH:/usr/local/Cellar/openvpn/3.5.7/sbin"
-export PATH="$PATH:/usr/local/share/john"
-export PATH="$PATH:/usr/local/opt/openjdk/bin"
-export PATH="$PATH:/usr/local/opt/llvm/bin"
+export PATH="/usr/local/Cellar/openvpn/3.5.7/sbin:$PATH"
+export PATH="/usr/local/share/john:$PATH"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+#export PATH="/Users/cgrace/dev/tools/zig-macos-x86_64-0.14.0-dev:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # prompt
 autoload -U compinit && compinit
