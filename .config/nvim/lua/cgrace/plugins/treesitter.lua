@@ -14,6 +14,7 @@ return {
         'luadoc',
         'markdown',
         'markdown_inline',
+        'odin',
         'query',
         'regex',
         'rust',

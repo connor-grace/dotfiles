@@ -2,6 +2,7 @@ export PATH="/usr/local/Cellar/openvpn/3.5.7/sbin:$PATH"
 export PATH="/usr/local/share/john:$PATH"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/Users/cgrace/dev/tools/aseprite/build/bin:$PATH"
 #export PATH="/Users/cgrace/dev/tools/zig-macos-x86_64-0.14.0-dev:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
