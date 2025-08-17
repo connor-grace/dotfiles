@@ -7,7 +7,8 @@
 autoload -U compinit && compinit
 setopt prompt_subst
 source /usr/local/opt/git/etc/bash_completion.d/git-prompt.sh 
-PROMPT='%F{cyan}%1~%B%f%F{green}$(__git_ps1)%f %F{yellow}>%f '
+PROMPT=$'\n%F{magenta}╭─%f %F{cyan}%~%f%F{green}$(__git_ps1)%f\n%F{magenta}╰─>%f '
+
 
 autoload -Uz compinit
 compinit -C

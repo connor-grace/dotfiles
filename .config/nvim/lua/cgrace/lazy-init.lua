@@ -16,13 +16,16 @@ require('lazy').setup {
     spec = {
         --"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
-        require 'cgrace/plugins/cmp',
+        require 'cgrace/plugins/blink-cmp',
         require 'cgrace/plugins/colorscheme',
         require 'cgrace/plugins/conform',
         require 'cgrace/plugins/generate',
         require 'cgrace/plugins/gitsigns',
         require 'cgrace/plugins/harpoon',
-        --require 'cgrace/plugins/indent_line',
+        require 'cgrace/plugins/aerial',
+        require 'cgrace/plugins/nvim-tree',
+        require 'cgrace/plugins/oil',
+        --require 'cgrace/plugins/indent_blankline',
         --require 'cgrace/plugins/lint',
         require 'cgrace/plugins/lspconfig',
         require 'cgrace/plugins/mini',
