@@ -7,7 +7,7 @@ font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
 
-theme = nord
+theme = "Kanagawa Dragon"
 
 cursor-style = block
 shell-integration-features = no-cursor

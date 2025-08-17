@@ -1,26 +1,47 @@
-export PATH="/usr/local/Cellar/openvpn/3.5.7/sbin:$PATH"
-export PATH="/usr/local/share/john:$PATH"
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-export PATH="/Users/cgrace/dev/tools/aseprite/build/bin:$PATH"
-#export PATH="/Users/cgrace/dev/tools/zig-macos-x86_64-0.14.0-dev:$PATH"
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-export HOMEBREW_NO_AUTO_UPDATE=1
+################################################################################
+# Runs only when you start an interactive shell.                               #
+# Keep aliases, prompt setup, functions, completions, keybindings here.        #
+# Environment variables only if they’re interactive-only                       #
+################################################################################
 
-# prompt
 autoload -U compinit && compinit
-source ~/.git-prompt.sh
-setopt PROMPT_SUBST
-PS1='%F{cyan}%1~%B%f%F{magenta}$(__git_ps1)%f %F{yellow}>%f '
+setopt prompt_subst
+source /usr/local/opt/git/etc/bash_completion.d/git-prompt.sh 
+PROMPT='%F{cyan}%1~%B%f%F{green}$(__git_ps1)%f %F{yellow}>%f '
+
+autoload -Uz compinit
+compinit -C
+
+# Optional: auto-compile the dump to speed future shells
+if [[ -s ~/.zcompdump && ( ! -s ~/.zcompdump.zwc || ~/.zcompdump -nt ~/.zcompdump.zwc ) ]]; then
+  zcompile ~/.zcompdump
+fi
+
+export NVM_DIR="$HOME/.nvm"
+nvm() {
+  unset -f nvm
+  # Load nvm only when first used
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"
+  nvm "$@"
+}
+# Load completion after first nvm load (optional)
+_nvm_completion() {
+  unset -f _nvm_completion
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \
+    . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+}
+# Hook: when completion system asks for nvm, load it once
+compdef _nvm_completion nvm 2>/dev/null
+
+export EDITOR=nvim
 
 # aliases
-alias zrc='nvim ~/.zshrc'
-alias src='source ~/.zshrc && source ~/.zshenv && tmux source-file ~/.config/tmux/tmux.conf'
+alias zshrc='nvim ~/.zshrc'
+alias zshenv='nvim ~/.zshenv'
+alias zprofile='nvim ~/.zprofile'
+alias src='source ~/.zshrc && source ~/.zshenv && ~/.zprofile'
 alias ll='ls -lah'
 alias config='cd ~/.config'
-alias rmp='vim ~/.config/nvim/lua/cgrace/remap.lua'
 alias ovpn='sudo openvpn'
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cfgpush='cfg add -u && cfg commit -m "update dotfiles" && cfg push'
