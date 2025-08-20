@@ -26,14 +26,39 @@ vim.keymap.set(
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set(
+    'n',
+    '<C-h>',
+    '<C-w><C-h>',
+    { desc = 'Move focus to the left window' }
+)
+vim.keymap.set(
+    'n',
+    '<C-l>',
+    '<C-w><C-l>',
+    { desc = 'Move focus to the right window' }
+)
+vim.keymap.set(
+    'n',
+    '<C-j>',
+    '<C-w><C-j>',
+    { desc = 'Move focus to the lower window' }
+)
+vim.keymap.set(
+    'n',
+    '<C-k>',
+    '<C-w><C-k>',
+    { desc = 'Move focus to the upper window' }
+)
 
 vim.keymap.set('n', '<leader>ff', function()
     require('oil').open()
 end, { desc = 'File Explorer (Oil)' })
+
+vim.keymap.set('n', '<leader>fp', function()
+    local path = vim.fn.expand '%'
+    vim.fn.setreg('+', path)
+end, { desc = 'Copy file path (relative to CWD)' })
 
 vim.keymap.set(
     'v',
@@ -95,9 +120,6 @@ vim.keymap.set(
 --vim.keymap.set("n", "<leader>j", "<cmd>lnext<CR>zz")
 --vim.keymap.set("n", "<leader>k", "<cmd>lprev<CR>zz")
 
--- New tmux window
---vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-
 vim.keymap.set(
     'n',
     '<leader>rw',
@@ -119,8 +141,3 @@ vim.keymap.set(
     '<cmd>!chmod +x %<CR>',
     { desc = 'Make file executable', silent = true }
 )
-
--- Source
---vim.keymap.set("n", "<leader><leader>", function()
---  vim.cmd("so")
---end, { desc = "Source" })

@@ -2,16 +2,19 @@ return {
     { -- Autoformat
         'stevearc/conform.nvim',
         lazy = false,
-        --keys = {
-        --  {
-        --    '<leader>f',
-        --    function()
-        --      require('conform').format { async = true, lsp_fallback = true }
-        --    end,
-        --    mode = '',
-        --    desc = '[F]ormat buffer',
-        --  },
-        --},
+        keys = {
+            {
+                '<leader>F',
+                function()
+                    require('conform').format {
+                        async = true,
+                        lsp_fallback = true,
+                    }
+                end,
+                mode = '',
+                desc = '[F]ormat buffer',
+            },
+        },
         opts = {
             notify_on_error = false,
             format_on_save = function(bufnr)
@@ -36,8 +39,10 @@ return {
                 json = { 'prettierd' },
                 lua = { 'stylua' },
                 rust = { 'rustfmt' },
+                sh = { 'shfmt' },
                 typescript = { 'prettierd' },
                 zig = { 'zigfmt' },
+                zsh = { 'shfmt' },
                 -- Conform can also run multiple formatters sequentially
                 -- python = { "isort", "black" },
                 --
