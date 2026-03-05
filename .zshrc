@@ -44,6 +44,8 @@ alias ovpn='sudo openvpn'
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cfgpush='cfg add -u && cfg commit -m "update dotfiles" && cfg push'
 alias gst='git status'
+alias brewclean='brew autoremove && brew cleanup -s && brew cleanup --prune=all'
+alias fmtc="git ls-files -- '*.c' '*.h' ':(exclude)third_party/**' ':(exclude)thirdparty/**' ':(exclude)vendor/**' | xargs clang-format -i"
 
 # functions
 function t() {

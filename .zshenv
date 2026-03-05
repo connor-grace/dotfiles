@@ -4,6 +4,5 @@
 # in all contexts (scripts, cronjobs, interactive shells).                     #
 ################################################################################
 
-export EDITOR=nvim
-
 export PATH="/opt/homebrew/bin:$PATH"
+. "$HOME/.cargo/env"

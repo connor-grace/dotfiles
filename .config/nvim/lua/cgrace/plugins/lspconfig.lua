@@ -74,9 +74,9 @@ return {
                     )
                     map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
                     map(
-                        'gh',
-                        '<cmd>ClangdSwitchSourceHeader<cr>',
-                        '[G]oto [H]eader/Source (C/C++)'
+                        '<leader>sh',
+                        '<cmd>LspClangdSwitchSourceHeader<cr>',
+                        '[H]eader/Source (C/C++)'
                     )
 
                     ---@param client vim.lsp.Client

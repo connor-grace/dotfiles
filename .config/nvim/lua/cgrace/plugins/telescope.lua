@@ -27,7 +27,7 @@ return {
             local builtin = require 'telescope.builtin'
             vim.keymap.set(
                 'n',
-                '<leader>sh',
+                '<leader>sH',
                 builtin.help_tags,
                 { desc = '[S]earch [H]elp' }
             )

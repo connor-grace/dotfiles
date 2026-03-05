@@ -1,4 +1,15 @@
 return {
+    {
+        'rebelot/kanagawa.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            -- Optionally configure and load the colorscheme
+            -- directly inside the plugin declaration.
+            vim.cmd.colorscheme 'kanagawa-dragon'
+            -- vim.cmd.colorscheme 'kanagawa-lotus'
+        end,
+    },
     -- {
     --     'EdenEast/nightfox.nvim',
     --     lazy = false,
@@ -32,14 +43,4 @@ return {
     --         vim.cmd.colorscheme('sonokai')
     --     end
     -- },
-    {
-        'rebelot/kanagawa.nvim',
-        lazy = false,
-        priority = 1000,
-        config = function()
-            -- Optionally configure and load the colorscheme
-            -- directly inside the plugin declaration.
-            vim.cmd.colorscheme('kanagawa-dragon')
-        end
-    },
 }

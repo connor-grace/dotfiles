@@ -11,7 +11,7 @@ return {
                         lsp_fallback = true,
                     }
                 end,
-                mode = '',
+                mode = { 'n', 'v' },
                 desc = '[F]ormat buffer',
             },
         },

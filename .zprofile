@@ -17,8 +17,8 @@ if [[ -z ${_LOGIN_ENV_DONE-} ]]; then
     fi
 
     # Toolchains (avoid xcrun on every shell)
-    : "${CC:=/usr/bin/clang}"
-    : "${CXX:=/usr/bin/clang++}"
+    : "${CC:=/usr/local/opt/llvm/bin/clang}"
+    : "${CXX:=/usr/local/opt/llvm/bin/clang++}"
     export CC CXX
 
     # Java (set only if you actually need Java 8 globally)
@@ -34,9 +34,8 @@ if [[ -z ${_LOGIN_ENV_DONE-} ]]; then
     export PATH="/usr/local/share/john:$PATH"
     export PATH="/usr/local/opt/openjdk/bin:$PATH"
     export PATH="/usr/local/opt/llvm/bin:$PATH"
+    export PATH="/usr/local/opt/lld/bin:$PATH"
     export PATH="/Users/cgrace/dev/tools/aseprite/build/bin:$PATH"
-    export PATH="/usr/local/opt/llvm/bin/clang-format:$PATH"
-    #export PATH="/Users/cgrace/dev/tools/zig-macos-x86_64-0.14.0-dev:$PATH"
     export PATH=/Users/cgrace/.opencode/bin:$PATH
 
     export HOMEBREW_NO_AUTO_UPDATE=1

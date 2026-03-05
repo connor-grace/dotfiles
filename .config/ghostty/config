@@ -8,6 +8,7 @@ font-feature = -liga
 font-feature = -dlig
 
 theme = "Kanagawa Dragon"
+#theme = "GruvboxLight"
 
 cursor-style = block
 shell-integration-features = no-cursor
